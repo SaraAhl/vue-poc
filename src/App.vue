@@ -1,11 +1,19 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const mood = ref('')
+
+const moods = ['😊 Glad', '😢 Ledsen', '😡 Arg', '😴 Trött', '😌 Lugn']
+
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
-</template>
+<h1>Hur känner du dig idag?</h1>
 
-<style scoped></style>
+  <button v-for="item in moods" :key="item" @click="mood = item">
+  {{ item }}
+</button>
+
+<p v-if="mood">Du känner dig: {{ mood }}</p>
+
+</template>
