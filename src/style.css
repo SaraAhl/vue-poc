@@ -10,21 +10,27 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
   }
 
+  h1 {
+    margin-bottom: 15px;
+    font-size: 32px;
+  }
+  
   button {
     padding: 12px 20px;
     margin: 5px;
     border: none;
     border-radius: 10px;
+    background-color: #7bc9a8;
     font-size: 16px;
     cursor: pointer;
-    background-color: #7bc9a8;
     transition: background-color 0.2s;
   }
-
+  
   button:hover {
-    transform: scale(1.05);
     background-color: #5fae8d;
   }
 
@@ -33,4 +39,28 @@ body {
     padding: 15px 25px;
     border-radius: 12px;
     margin: 10px;
+  }
+
+  img {
+    width: 400px;
+    max-height: 300px;
+    object-fit: contain;    
+    border-radius: 15px;
+    margin-top: 25px;
+  }
+
+  .mood-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .result {
+    margin-bottom: 5px;
+  }
+  
+  .message {
+    margin-top: 5px;
+    font-size: 18px;
   }

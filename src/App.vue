@@ -23,12 +23,14 @@ const messages ={
 
 <template>  
   <h1>Hur känner du dig idag?</h1>
-  <p v-if="mood">Du känner dig: {{ mood.name }}</p>
-  <p v-if="mood">{{ messages[mood.name] }}</p>
+  <p v-if="mood" class="result">Du känner dig: {{ mood.name }}</p>
+  <p v-if="mood" class="message">{{ messages[mood.name] }}</p>
 
+  <div class="mood-buttons">
   <button v-for="item in moods" :key="item.name" @click="mood = item">
-  {{ item.name }}
-</button>
+    {{ item.name }}
+  </button>
+</div>
 
 <div v-if="mood">
   <img :src="mood.image" :alt="mood.name">
